@@ -13,6 +13,7 @@ interface productType {
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
+  products: any = [];
   form: FormGroup;
   public loginInvalid = false;
   selectedValue!: string;
@@ -41,6 +42,9 @@ export class AddProductComponent implements OnInit {
     'UK 12.5',
     'UK 13',
   ];
+  editPres: any;
+  add!: boolean;
+  edit!: boolean;
   constructor(private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
       productName: ['', Validators.required],
@@ -59,9 +63,35 @@ export class AddProductComponent implements OnInit {
     if (this.form.valid) {
       try {
         console.log(this.form.value);
+        this.products.push(this.form.value);
       } catch (err) {
         console.error(err);
       }
+    }
+    this.edit = false;
+  }
+
+  /* To edit details */
+
+  onEdit(data: any) {
+    this.editPres = data;
+    console.log(data);
+    this.add = false;
+    this.edit = true;
+    this.form = this.fb.group({
+      productName: data.productName,
+      productType: data.productType,
+      productDescription: data.productDescription,
+      // availableSizes: data.availableSizes,
+      productCost: data.productCost,
+      // productImage: data.productImage,
+    });
+  }
+  /* To delete details */
+  onDelete(data: any) {
+    const index: number = this.products.indexOf(data);
+    if (index !== -1) {
+      this.products.splice(index, 1);
     }
   }
 }

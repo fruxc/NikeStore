@@ -76,3 +76,63 @@
     </div>
   </div>
 </section>
+<section class="view" id="view">
+  <div class="container text-center mt-5">
+    <h2>List Of Data Available</h2>
+    <div class="col-12">
+      <div *ngIf="products.length == 0 || products.length == undefined" class="noResult">
+        <h3>No Data Available at this moment</h3>
+        <h2 *ngIf="add">Add New Item</h2>
+        <h2 *ngIf="edit">Edit the following</h2>
+      </div>
+      <table *ngIf="products.length > 0" id="table" class="contentDiv table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" data-field="name">Product Name</th>
+            <th scope="col" data-field="type">Product Type</th>
+            <th scope="col" data-field="size">Available Sizes</th>
+            <th scope="col" data-field="description">Product Description</th>
+            <th scope="col" data-field="cost">Product Cost</th>
+            <th scope="col" data-field="image">Product Image</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let data of products; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>
+              {{ data.productName }}
+            </td>
+            <td>
+              {{ data.productType }}
+            </td>
+            <td>
+              {{ data.availableSizes }}
+            </td>
+            <td>
+              {{ data.productDescription }}
+            </td>
+            <td>
+              {{ data.productCost }}
+            </td>
+            <td>
+              {{ data.productImage }}
+            </td>
+            <td>
+              <button>
+                <a (click)="onEdit(data)"><i class="fas fa-pencil-alt"></i></a>
+              </button>
+            </td>
+            <td>
+              <button type="submit">
+                <a (click)="onDelete(data)"><i class="fas fa-trash-alt"></i></a>
+              </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
