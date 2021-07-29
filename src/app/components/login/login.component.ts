@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  /* Form group and Validations*/
   form: FormGroup;
   public loginInvalid = false;
 
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit() {}
 
+  /*Submit form data*/
   async onSubmit(): Promise<void> {
     this.loginInvalid = false;
     console.error(this.form);

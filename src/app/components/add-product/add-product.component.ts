@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
+/* Product object*/
 interface productType {
   value: string;
   viewValue: string;
@@ -14,13 +16,14 @@ export class AddProductComponent implements OnInit {
   form: FormGroup;
   public loginInvalid = false;
   selectedValue!: string;
-
+  /* Form Details */
   productTypes: productType[] = [
     { value: 'Men-1', viewValue: 'Men' },
     { value: 'Women-1', viewValue: 'Women' },
     { value: 'Kids-1', viewValue: 'Kids' },
   ];
 
+  /* Size array */
   availableSizes: string[] = [
     'UK 6 (EU 40)',
     'UK 6.5',
@@ -50,6 +53,7 @@ export class AddProductComponent implements OnInit {
   }
   ngOnInit() {}
 
+  /* On submit */
   async onSubmit(): Promise<void> {
     this.loginInvalid = false;
     if (this.form.valid) {
