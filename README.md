@@ -13,7 +13,7 @@ npm install
 npm start
 ```
 
-### Great! Hassle Free Way of Running a Angular Application
+### Great! Hassle Free Way of Running an Angular Application
 
 ### Wireframes
 
