@@ -17,8 +17,10 @@ npm start
 
 ### Wireframes
 
-![First](https://github.com/fruxc/PharMedic/blob/main/src/assets/images/1.png?raw=true "first")
+![First](https://github.com/fruxc/NikeStore/blob/master/src/assets/Figma/frame-1.png?raw=true "first")
 
-![Second](https://github.com/fruxc/PharMedic/blob/main/src/assets/images/2.png?raw=true "second")
+![Second](https://github.com/fruxc/NikeStore/blob/master/src/assets/Figma/frame-2.png?raw=true "second")
 
-![Third](https://github.com/fruxc/PharMedic/blob/main/src/assets/images/3.png?raw=true "third")
+![Third](https://github.com/fruxc/NikeStore/blob/master/src/assets/Figma/frame-3.png?raw=true "third")
+
+![Forth](https://github.com/fruxc/NikeStore/blob/master/src/assets/Figma/frame-4.png?raw=true "forth")
