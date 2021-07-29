@@ -1,0 +1,23 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+section {
+  height: 500px;
+  background-color: white;
+}
+
+input {
+  border: 1px solid back;
+  border-radius: 1px;
+}
+
+.row {
+  margin-top: 120px;
+}
