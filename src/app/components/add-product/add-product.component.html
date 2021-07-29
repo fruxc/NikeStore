@@ -1,0 +1,78 @@
+<section>
+  <div class="container ml-0 px-0">
+    <div class="row">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h4>Add Product</h4><br /><br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Product Name:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <input matInput formControlName="productName" class="form-control" id="productName"
+              placeholder="Product Name" required>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Product Type:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <mat-select [(ngModel)]="selectedValue" formControlName="productType" class="form-control"
+              name="productType" id="productType" placeholder="Product Type">
+              <mat-option *ngFor="let productType of productTypes" [value]="productType.value">
+                {{productType.viewValue}}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Available Sizes:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <mat-select formControlName="availableSizes" class="form-control" id="availableSizes"
+              placeholder="Available sizes" required multiple>
+              <mat-option *ngFor="let availableSize of availableSizes" [value]="availableSize">{{availableSize}}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Product Description:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <textarea matInput formControlName="productDescription" class="form-control" id="productDescription"
+              placeholder="Product Description" required></textarea>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Product Cost:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <input matInput formControlName="productCost" class="form-control" id="productCost"
+              placeholder="Product Cost" required>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-label>Upload Product Images:</mat-label>
+          </div>
+          <div class="col-sm-4">
+            <input formControlName="productImage" class="form-control" id="productImage" type="file" multiple required>
+          </div>
+        </div>
+        <br />
+        <div class="col-8 mx-auto">
+          <button mat-raised-button class="btn btn-dark">Add Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

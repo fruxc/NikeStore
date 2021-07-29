@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
