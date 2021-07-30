@@ -15,7 +15,7 @@ npm start
 
 ### Great! Hassle Free Way of Running an Angular Application
 
-### Wireframes
+### Wireframes using FIGMA
 
 ![First](https://github.com/fruxc/NikeStore/blob/master/src/assets/Figma/frame-1.png?raw=true "first")
 
